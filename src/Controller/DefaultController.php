@@ -30,21 +30,35 @@ class DefaultController extends AbstractController
                 && !empty($_POST['photo2'])
                 && !empty($_POST['lien1'])
             ){
-                return $this->render('/index.html.twig');
+                return $this->render('/default/good.html.twig');
             }
         }
-        return $this->render('/default/facebook_index.html.twig');
+        return $this->render('/default/bad.html.twig');
     }
 
     /**
-     * @Route("/test", name="app_test")
+     * @Route("/facebookIndex", name="app_facebookIndex")
      */
-    public function test()
-    {
 
-        var_dump($_POST);
-        exit();
-        return $this->render('/default/facebook_index.html.twig');
+    public function facebookIndex()
+    {
+        return $this->render('/default/facebookIndex.html.twig');
     }
 
+    /**
+     * @Route("/good", name="app_good")
+     */
+    public function goodChoice()
+    {
+        return $this->render('/default/good.html.twig');
+    }
+
+    /**
+     * @Route("/bad", name="app_bad")
+     */
+    public function badChoice()
+    {
+        return $this->render('/default/bad.html.twig');
+    }
 }
+
