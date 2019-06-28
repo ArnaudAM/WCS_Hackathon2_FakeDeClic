@@ -10,9 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/", name="app_index")
      */
 
@@ -20,4 +18,33 @@ class DefaultController extends AbstractController
     {
         return $this->render('index.html.twig');
     }
+
+    /**
+     * @Route("/facebook", name="app_facebook")
+     */
+    public function facebook()
+    {
+        if (!empty($_POST)){
+            if(!empty($_POST['date1'])
+                && !empty($_POST['auteur1'])
+                && !empty($_POST['photo2'])
+                && !empty($_POST['lien1'])
+            ){
+                return $this->render('/index.html.twig');
+            }
+        }
+        return $this->render('/default/facebook_index.html.twig');
+    }
+
+    /**
+     * @Route("/test", name="app_test")
+     */
+    public function test()
+    {
+
+        var_dump($_POST);
+        exit();
+        return $this->render('/default/facebook_index.html.twig');
+    }
+
 }
