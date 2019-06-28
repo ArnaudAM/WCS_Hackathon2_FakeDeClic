@@ -13,15 +13,30 @@
 </head>
 
 <body>
-<div class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+
+<nav class="navbar navbar-dark bg-dark">
+    <div class="navbar" id="navbarNavDropdown">
+        <ul class="navbar-pers">
+            <li class="nav-item">
+                <a class="nav-link" href="http://127.0.0.1:8000/"><img src="{{ asset('assets/img/home.png') }}" alt="Accueil" /></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><img src="{{ asset('assets/img/fb.png') }}" alt="Facebook" /></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><img src="{{ asset('assets/img/insta.png') }}" alt="Instagram" /></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><img src="{{ asset('assets/img/whatsapp.png') }}" alt="Whatsapp" /></a>
+            </li>
+        </ul>
     </div>
-</div>
+</nav>
 
+{% block body %}
 
-{% block body %}{% endblock %}
+{% endblock %}
+
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
 {% endblock %}
