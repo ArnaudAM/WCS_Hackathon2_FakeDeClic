@@ -30,4 +30,22 @@ class DefaultController extends AbstractController
     {
         return $this->render('/default/sidebar.html.twig');
     }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/good", name="app_good")
+     */
+    public function goodChoice()
+    {
+        return $this->render('/default/good.html.twig');
+    }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/bad", name="app_bad")
+     */
+    public function badChoice()
+    {
+        return $this->render('/default/bad.html.twig');
+    }
 }
