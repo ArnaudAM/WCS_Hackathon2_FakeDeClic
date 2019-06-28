@@ -10,9 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
-
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/", name="app_index")
      */
 
@@ -22,17 +20,32 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
-     * @Route("/sidebar", name="app_sidebar")
+     * @Route("/facebook", name="app_facebook")
      */
-
-    public function sidebar()
+    public function facebook()
     {
-        return $this->render('/default/sidebar.html.twig');
+        if (!empty($_POST)){
+            if(!empty($_POST['date1'])
+                && !empty($_POST['auteur1'])
+                && !empty($_POST['photo2'])
+                && !empty($_POST['lien1'])
+            ){
+                return $this->render('/default/good.html.twig');
+            }
+        }
+        return $this->render('/default/bad.html.twig');
     }
 
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/facebookIndex", name="app_facebookIndex")
+     */
+
+    public function facebookIndex()
+    {
+        return $this->render('/default/facebookIndex.html.twig');
+    }
+
+    /**
      * @Route("/good", name="app_good")
      */
     public function goodChoice()
@@ -41,7 +54,6 @@ class DefaultController extends AbstractController
     }
 
     /**
-     * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/bad", name="app_bad")
      */
     public function badChoice()
@@ -49,3 +61,4 @@ class DefaultController extends AbstractController
         return $this->render('/default/bad.html.twig');
     }
 }
+

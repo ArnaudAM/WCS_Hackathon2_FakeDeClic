@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container" xmlns="http://www.w3.org/1999/html">
+        <div class="row">
+            <div class="col-9">
+            </div>
+            <div class="col-3 bg-white">
+                <div>
+                    <form action="/facebook" method="post">
+                        <div class="face_date">
+                            <h4>Date</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="date1"
+                                       id="date1" value="date1">
+                                <label class="form-check-label" for="date1">
+                                    <em>2019 c'est récent</em>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="date2"
+                                       id="date2" value="date2">
+                                <label class="form-check-label" for="date2">
+                                    <em>2016 moin récent</em>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="date3"
+                                       id="date3" value="date3">
+                                <label class="form-check-label" for="date3">
+                                    <em>2006 ça date</em>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="face_auteur">
+                            <h4>Auteur</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="auteur1"
+                                       id="auteur1" value="auteur1">
+                                <label class="form-check-label" for="auteur1">
+                                    <em>Je le connais</em>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="auteur2"
+                                       id="auteur2" value="auteur2">
+                                <label class="form-check-label" for="auteur2">
+                                    <em>J'en ai entendu parler</em>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="auteur3"
+                                       id="auteur3" value="auteur3">
+                                <label class="form-check-label" for="auteur3">
+                                    <em>c'est ki?</em>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="face_photo">
+                            <h4>Photo</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="photo1"
+                                       id="photo1" value="photo1">
+                                <label class="form-check-label" for="photo1">
+                                    <em>Elle est signée par un photographe</em>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="photo2"
+                                       id="photo2" value="photo2">
+                                <label class="form-check-label" for="photo2">
+                                    <em>Je l'ai déjà vu</em>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="photo3"
+                                       id="photo3" value="photo3">
+                                <label class="form-check-label" for="photo3">
+                                    <em>Elle est bizarre</em>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="face_lien">
+                            <h4>lien</h4>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="lien1"
+                                       id="lien1" value="lien1">
+                                <label class="form-check-label" for="lien1">
+                                    <em>Je connais ce site</em>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="lien2"
+                                       id="lien2" value="lien2">
+                                <label class="form-check-label" for="lien2">
+                                    <em>Je ne connais pas ce site</em>
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" value="Submit" class="btn_face">Fake-news ?</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>Te voici sur Facebook. Tu vois apparaître ce post dans ton flux.</br>
+            A ton avis, est ce une fake-news ?</h2>
+
+        <h2><img src="{{ asset('assets/img/FB-page.jpg') }}" class="imageCenter" height="500" width="auto"
+                 alt="Photo Facebook accueil"/></h2>
+    </div>
+
+{% endblock %}
+

@@ -1,0 +1,45 @@
+.face_date
+{
+  border: yellow 3px solid;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+.face_auteur
+{
+  border: #A05793 3px solid;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+.face_photo
+{
+  border: #245E71 3px solid;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+.face_lien
+{
+  border: #2AA5A1 3px solid;
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.btn_face
+{
+  width: 200px;
+  margin: 10px;
+  height: 50px;
+  color: white;
+  background-color: #0d3349;
+  font-weight: bold;
+  transition: background-color 0.7s;
+}
+
+.btn_face:hover
+{
+  color: #0d3349;
+  background-color: white;
+}
